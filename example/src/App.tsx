@@ -8,6 +8,7 @@ const providerUrls: Record<string, string> = {
 	twitter: 'https://api.twitter.com/2/users/me?user.fields=profile_image_url',
 	reddit: 'https://oauth.reddit.com/api/v1/me',
 	auth0: 'https://dev-u8csbbr8zashh2k8.us.auth0.com/userinfo',
+	auth: 'https://a-ci.ncats.io:443/_api/auth/ls/me',
 };
 
 function App() {
@@ -56,6 +57,8 @@ function App() {
 					<a href="/auth/login/reddit">Log in with Reddit</a>
 					<br />
 					<a href="/auth/login/auth0">Log in with Auth0</a>
+					<br/>
+					<a href="/auth/login/auth">Log in with Auth</a>
 				</div>
 			)}
 		</div>

@@ -9,3 +9,6 @@ export const TWITTER_CLIENT_ID = 'YnYyTHhGRGtsMUhOd0R2VG1Fbmo6MTpjaQ';
 export const REDDIT_CLIENT_ID = 'H2QfeYpbvg_m_JE6PL0YCA';
 
 export const AUTH0_CLIENT_ID = 'jK8ZE3y3f9Hk3VYVXxuXZGL3rVMQ0V8o';
+
+export const AUTH_CLIENT_ID = 'serviceWorkerApp';
+

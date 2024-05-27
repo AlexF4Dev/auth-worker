@@ -6,6 +6,7 @@ export function loadAuthServiceWorker(
 	config: IConfig,
 	{ workerPath = './service-worker.js', scope = '/', debug = false, patchUnregister = true }: IWorkerSettings = {}
 ) {
+	console.log('loadAuthServiceWorker');
 	const workerRegistration = window.navigator.serviceWorker.register(
 		workerPath +
 			'?' +

@@ -1,6 +1,7 @@
 import { IFullConfig } from 'auth-worker';
+import { auth } from '../workers/provider';
 import { google, facebook, twitter, reddit, auth0 } from 'auth-worker/providers';
-import { GOOGLE_CLIENT_ID, FB_CLIENT_ID, TWITTER_CLIENT_ID, REDDIT_CLIENT_ID, AUTH0_CLIENT_ID } from './consts';
+import { GOOGLE_CLIENT_ID, FB_CLIENT_ID, TWITTER_CLIENT_ID, REDDIT_CLIENT_ID, AUTH0_CLIENT_ID, AUTH_CLIENT_ID } from './consts';
 
 export const OAUTH2_CONFIG: IFullConfig = {
 	config: {
@@ -24,6 +25,11 @@ export const OAUTH2_CONFIG: IFullConfig = {
 			clientId: AUTH0_CLIENT_ID,
 			scopes: 'openid profile email offline_access',
 		},
+		auth: {
+			clientId: AUTH_CLIENT_ID,
+			scopes: 'openid profile email offline_access',
+		},
+
 	},
-	providers: { google, facebook, twitter, reddit, auth0: auth0('dev-u8csbbr8zashh2k8.us.auth0.com') },
+	providers: { google, facebook, twitter, reddit, auth0: auth0('dev-u8csbbr8zashh2k8.us.auth0.com'), auth },
 } as const;
